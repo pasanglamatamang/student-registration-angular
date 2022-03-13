@@ -19,26 +19,32 @@ select {
 }
 
 p {
-  font-size: 12px;
-  width: 150px;
-  display: inline-block;
-  margin-left: 18px;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  color: gray;
 }
+
 h1 {
   font-family: 'poppins', 'sans-serif';
   font-size: 35px;
   font-weight: 600;
   color: #242424;
   text-align: center;
-  padding-top: 30px;
-  margin-bottom: 10px;
+  padding-top: 35px;
+  margin-bottom: -15px;
+}
+
+.subDescription{
+  font-family: 'poppins', 'sans-serif';
 }
 
 h4 {
   font-family: 'poppins', 'sans-serif';
-  font-size: 20px;
-  font-weight: 400;
-  color: #242424;
+  font-size: 16px;
+  font-weight: 300;
+  color: gray;
   text-align: center;
   padding-top: 30px;
   margin-bottom: 10px;
@@ -54,7 +60,7 @@ html,body{
     position  : absolute;
     transform : translate(-50%, -50%);
   width: 520px; 
-  height: 730px; 
+  height: 770px; 
   -webkit-border-radius: 8px/7px; 
   -moz-border-radius: 8px/7px; 
   border-radius: 8px/7px; 
@@ -124,11 +130,11 @@ hr{
 
 input[type=text],input[type=password], input[type=date]{
   width: 335px; 
-  height: 57px; 
+  height: 58px; 
   -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
   -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px; 
   border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
-  background-color: rgb(237, 237, 237); 
+  background-color: #f2f2f2; 
 
   border: solid 0px #cbc9c9;
   margin-left: -5px;
@@ -140,18 +146,22 @@ input[type=password]{
   margin-bottom: 25px;
 }
 
+input[type=date]{
+  color: grey;
+}
+
 #icon {
   display: inline-block;
   width: 40px;
-  background-color: #1463da;
+  background-color: #F2F2F2;
   padding: 20px 0px 4px 15px;
   margin-left: 10px;
   -webkit-border-radius: 4px 0px 0px 4px; 
   -moz-border-radius: 4px 0px 0px 4px; 
   border-radius: 4px 0px 0px 4px;
-  color: rgb(255, 255, 255);
+  color: rgb(154, 154, 154);
   border: solid px #cbc9c9;
-  height: 33px;
+  height: 34px;
   
 }
 
@@ -173,7 +183,7 @@ font-size: 15px;
 }
 
 button {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: white;
   padding: 3px 25px 0px 20px;
@@ -189,6 +199,7 @@ button {
   background-color: #1463da; 
   text-align: center;
   align-items: center;
+  border: none;
 }
 
 button:hover {

@@ -2,8 +2,10 @@
   <h1>Student Registration</h1>
 
   <form #addForm="ngForm" (ngSubmit)="registerStudent(addForm)">
+    <p class="subDescription">Please fill in this form to register an account!</p>
     <hr>
 
+    
     <label id="icon" for="email"><i class="fa fa-envelope-o "></i></label>
     <input type="text" ngModel name="email" id="email" placeholder="Email" required/>
 
@@ -21,7 +23,7 @@
 
     <hr>
 
-    <button [disabled]="addForm.invalid" type="submit" class="button">Register</button>
+    <button [disabled]="addForm.invalid" type="submit" class="button">REGISTER</button>
 
     <h4>
        Student Login?
