@@ -1,34 +1,33 @@
 <div class="testbox">
   <h1>Student Registration</h1>
 
-  <form action="/">
-    <hr>
-    <div class="accounttype">
-      <input type="radio" value="None" id="radioOne" name="account" checked/>
-      <label for="radioOne" class="radio" chec>Students</label>
-      <input type="radio" value="None" id="radioTwo" name="account"/>
-      <label for="radioTwo" class="radio">Teachers</label>
-    </div>
+  <form #addForm="ngForm" (ngSubmit)="registerStudent(addForm)">
     <hr>
 
     <label id="icon" for="email"><i class="fa fa-envelope-o "></i></label>
-    <input type="text" name="email" [(ngModel)]="student.email" id="email" placeholder="Email" required/>
+    <input type="text" ngModel name="email" id="email" placeholder="Email" required/>
 
     <label id="icon" for="firstName"><i class="fa fa-user-o"></i></label>
-    <input type="text" name="firstName" [(ngModel)]="student.firstName" id="firstName" placeholder="First Name" required/>
+    <input type="text" ngModel name="firstName" id="firstName" placeholder="First Name" required/>
 
-    <label id="icon" for="lastName"><i class="fa fa-user-o"></i></label>
-    <input type="text" name="lastName" [(ngModel)]="student.lastName" id="lastName" placeholder="Last Name" required/>
+    <label id="icon" for="lastName"><p class="lettericon">LN</p></label>
+    <input type="text" ngModel name="lastName" id="lastName" placeholder="Last Name" required/>
 
     <label id="icon" for="dob"><i class="fa fa-calendar" aria-hidden="true"></i></label>
-    <input type="text" name="name" [(ngModel)]="student.dob" id="dob" placeholder="DOB format dd/MM/yyy" required/>
+    <input type="date" ngModel name="dob"  id="dob" placeholder="DOB format dd/MM/yyy" required/>
 
     <label id="icon" for="password"><i class="fa fa-key" aria-hidden="true"></i></label>
-    <input type="password" name="password" [(ngModel)]="student.password" id="password" placeholder="Password" required/>
+    <input type="password" ngModel name="password"  id="password" placeholder="Password" required/>
 
     <hr>
 
-    <button (click)="registerStudent(student)" class="button">Register</button>
+    <button [disabled]="addForm.invalid" type="submit" class="button">Register</button>
+
+    <h4>
+       Student Login?
+    </h4>
   </form>
 </div>
+
+
 

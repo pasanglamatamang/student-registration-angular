@@ -8,7 +8,7 @@ import { Student } from "../student";
     providedIn: 'root'
 })
 export class StudentService {
-    private studentsURL = 'http://localhost:444/api';
+    public studentsURL = 'http://localhost:444/api';
 
     constructor(private http: HttpClient){
     }
@@ -26,8 +26,8 @@ export class StudentService {
 
     public addStudent(student: Student): Observable<Student>{
         //return this.http.post<Student>('${this.studentsURL}/api/addStudent', student);
-        const url = '${this.studentsURL}/addStudent';
-        return this.http.post<Student>(url, student);
+        
+        return this.http.post<Student>('http://localhost:444/api/addStudent', student);
 
     }
 
