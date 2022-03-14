@@ -54,21 +54,22 @@ html,body{
   background-color: #ffffff;
 }
 
-.alertBox{
+.alert-box{
+  background-color: #D9EBDB;
+  width: 520px;
+  height: 50px;
+  border-radius: 8px/7px; 
   left      : 50%;
   top       : 4%;
   position  : absolute;
   transform : translate(-50%, -50%);
-  width: 520px;
-  height: 50px;
-  border-radius: 8px/7px; 
-  background-color: #D9EBDB; 
-  color: #2A552A;
   text-align: center;
+  
 }
 
-.alert-success{
+.alertMessage{
   margin-top: 15px;
+  color: #2A552A;
 }
 
 .testbox {
