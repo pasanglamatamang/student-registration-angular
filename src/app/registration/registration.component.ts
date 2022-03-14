@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import {Component, OnInit} from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { StudentService } from '../service/student.service';
 import {Student} from "../student";
 
@@ -11,6 +11,16 @@ import {Student} from "../student";
 })
 export class RegistrationComponent implements OnInit {
   student: Student = new Student;
+
+  get Email(){
+    return this.formValidation.get('userEmail')
+  }
+  
+  formValidation = new FormGroup({
+    userEmail : new FormControl('',[
+      Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")])
+  })
+
 
   constructor(public studentService: StudentService) {
 

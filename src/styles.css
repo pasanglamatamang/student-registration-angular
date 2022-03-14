@@ -64,7 +64,21 @@ html,body{
   position  : absolute;
   transform : translate(-50%, -50%);
   text-align: center;
+  -webkit-animation: cssAnimation 5s forwards; 
+  animation: cssAnimation 5s forwards;
   
+}
+
+@keyframes cssAnimation {
+  0%   {opacity: 1;}
+  90%  {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@-webkit-keyframes cssAnimation {
+  0%   {opacity: 1;}
+  90%  {opacity: 1;}
+  100% {opacity: 0;}
 }
 
 .alertMessage{
@@ -78,7 +92,7 @@ html,body{
     position  : absolute;
     transform : translate(-50%, -50%);
   width: 520px; 
-  height: 770px; 
+  height: 820px; 
   -webkit-border-radius: 8px/7px; 
   -moz-border-radius: 8px/7px; 
   border-radius: 8px/7px; 
@@ -94,7 +108,7 @@ input[type=radio] {
 }
 
 form{
-  margin: 40px 50px;
+  margin: 20px 50px;
 }
 
 label.radio {
@@ -156,7 +170,7 @@ input[type=text],input[type=password], input[type=date]{
 
   border: solid 0px #cbc9c9;
   margin-left: -5px;
-  margin-top: 20px; 
+  margin-top: 35px; 
   padding-left: 10px;
 }
 
@@ -166,6 +180,16 @@ input[type=password]{
 
 input[type=date]{
   color: grey;
+}
+
+.validation-alert{
+  position: relative;
+  color: red;
+  margin-left: 15px;;
+}
+.email-validation-alert{
+  position: absolute;
+  margin-top: 3px;
 }
 
 #icon {

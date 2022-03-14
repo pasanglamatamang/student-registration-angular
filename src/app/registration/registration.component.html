@@ -10,13 +10,20 @@
 <div class="testbox">
   <h1>Student Registration</h1>
 
-  <form #addForm="ngForm" (ngSubmit)="registerStudent(addForm)">
+  <form #addForm="ngForm" (ngSubmit)="registerStudent(addForm.value)" [formGroup]="formValidation">
     <p class="subDescription">Please fill in this form to register an account!</p>
     <hr>
 
     
     <label id="icon" for="email"><i class="fa fa-envelope-o "></i></label>
-    <input type="text" ngModel name="email" id="email" placeholder="Email" required/>
+    <input [class.is-invalid] = "formValidation.get('userEmail')?.invalid && formValidation.get('userEmail')?.touched" 
+    formControlName = "userEmail" type="text" ngModel name="email" id="email" placeholder="Email" required/>
+
+    <div *ngIf="(Email?.invalid && Email?.touched) || Email?.dirty" class="validation-alert">
+    	<small *ngIf="Email?.errors?.['required']" class="email-validation-alert">Email address is required</small>
+    	<!--question mark(?) is a safe navigation operator-->
+    	<small *ngIf="Email?.errors?.['pattern']" class="email-validation-alert">Please provide a valid email address</small>
+  	</div>
 
     <label id="icon" for="firstName"><i class="fa fa-user-o"></i></label>
     <input type="text" ngModel name="firstName" id="firstName" placeholder="First Name" required/>
