@@ -54,6 +54,23 @@ html,body{
   background-color: #ffffff;
 }
 
+.alertBox{
+  left      : 50%;
+  top       : 4%;
+  position  : absolute;
+  transform : translate(-50%, -50%);
+  width: 520px;
+  height: 50px;
+  border-radius: 8px/7px; 
+  background-color: #D9EBDB; 
+  color: #2A552A;
+  text-align: center;
+}
+
+.alert-success{
+  margin-top: 15px;
+}
+
 .testbox {
     left      : 50%;
     top       : 50%;
@@ -159,7 +176,7 @@ input[type=date]{
   -webkit-border-radius: 4px 0px 0px 4px; 
   -moz-border-radius: 4px 0px 0px 4px; 
   border-radius: 4px 0px 0px 4px;
-  color: rgb(154, 154, 154);
+  color: #9a9a9a;
   border: solid px #cbc9c9;
   height: 34px;
   
@@ -169,6 +186,8 @@ input[type=date]{
 text-align: left;
 margin-left: -0px;
 font-size: 15px;
+text-decoration: none;
+color: #9A9A9A;
 
 }
 
@@ -191,7 +210,7 @@ button {
   margin-top: 20px;
   display: inline-block;
   text-decoration: none;
-  width: 415px; height: 55px; 
+  width: 420px; height: 55px; 
   -webkit-border-radius: 5px; 
   -moz-border-radius: 5px; 
   transition: all 0.1s linear 0s;

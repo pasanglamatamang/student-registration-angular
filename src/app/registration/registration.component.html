@@ -1,3 +1,11 @@
+
+<div class="alertBox">
+  <div *ngIf= "message" class="alert-success" role="alert">
+    <strong>Successfully Registered!</strong>
+    
+  </div>
+</div>
+
 <div class="testbox">
   <h1>Student Registration</h1>
 
@@ -23,7 +31,7 @@
 
     <hr>
 
-    <button [disabled]="addForm.invalid" type="submit" class="button">REGISTER</button>
+    <button [disabled]="addForm.invalid" type="submit" class="button">Register</button>
 
     <h4>
        Student Login?

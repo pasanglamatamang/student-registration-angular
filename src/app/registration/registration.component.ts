@@ -16,6 +16,8 @@ export class RegistrationComponent implements OnInit {
 
   }
 
+  message: boolean=false;
+
   ngOnInit(): void {
     //this.student = new Student();
   }
@@ -23,6 +25,7 @@ export class RegistrationComponent implements OnInit {
   registerStudent(addForm: NgForm) {
     this.studentService.addStudent(addForm.value).subscribe(
       (response: Student) => {
+        this.message = true;
         console.log(response);
       },
       (error: HttpErrorResponse) => {
