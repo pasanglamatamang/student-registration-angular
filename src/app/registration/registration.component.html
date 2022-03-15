@@ -1,23 +1,13 @@
-
-
-  <div  *ngIf="message" class="alert-box" role="alert">
-    <p class="alertMessage"><strong>{{ message }}</strong></p>
-    
-  </div>
-
-
-
 <div class="testbox">
   <h1>Student Registration</h1>
 
-  <form #addForm="ngForm" (ngSubmit)="registerStudent(addForm.value)" [formGroup]="formValidation">
+  <form #addForm="ngForm" (ngSubmit)="registerStudent()" [formGroup]="formValidation">
     <p class="subDescription">Please fill in this form to register an account!</p>
     <hr>
 
-    
     <label id="icon" for="email"><i class="fa fa-envelope-o "></i></label>
-    <input [class.is-invalid] = "formValidation.get('userEmail')?.invalid && formValidation.get('userEmail')?.touched" 
-    formControlName = "userEmail" type="text" ngModel name="email" id="email" placeholder="Email" required/>
+    <input [class.is-invalid] = "formValidation.get('email')?.invalid && formValidation.get('email')?.touched"
+    formControlName = "email" type="text" ngModel name="email" id="email" placeholder="Email" required/>
 
     <div *ngIf="(Email?.invalid && Email?.touched) || Email?.dirty" class="validation-alert">
     	<small *ngIf="Email?.errors?.['required']" class="email-validation-alert">Email address is required</small>
@@ -26,21 +16,24 @@
   	</div>
 
     <label id="icon" for="firstName"><i class="fa fa-user-o"></i></label>
-    <input type="text" ngModel name="firstName" id="firstName" placeholder="First Name" required/>
+    <input type="text" ngModel name="firstName" formControlName="firstName" id="firstName" placeholder="First Name" required/>
 
     <label id="icon" for="lastName"><p class="lettericon">LN</p></label>
-    <input type="text" ngModel name="lastName" id="lastName" placeholder="Last Name" required/>
+    <input type="text" ngModel name="lastName" formControlName="lastName" id="lastName" placeholder="Last Name" required/>
 
     <label id="icon" for="dob"><i class="fa fa-calendar" aria-hidden="true"></i></label>
-    <input type="date" ngModel name="dob"  id="dob" placeholder="DOB format dd/MM/yyy" required/>
+    <input type="date" ngModel name="dob" formControlName="dob" id="dob" placeholder="DOB format dd/MM/yyy" required/>
 
     <label id="icon" for="password"><i class="fa fa-key" aria-hidden="true"></i></label>
-    <input type="password" ngModel name="password"  id="password" placeholder="Password" required/>
+    <input type="password" ngModel name="password" formControlName="password" id="password" placeholder="Password" required/>
 
     <hr>
 
     <button [disabled]="addForm.invalid" type="submit" class="button">Register</button>
+    <div  *ngIf="message" class="alert-box" role="alert">
+      <p class="alertMessage"><strong>{{ message }}</strong></p>
 
+    </div>
     <h4>
        Student Login?
     </h4>

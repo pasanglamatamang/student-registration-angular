@@ -13,12 +13,16 @@ export class RegistrationComponent implements OnInit {
   student: Student = new Student;
 
   get Email(){
-    return this.formValidation.get('userEmail')
+    return this.formValidation.get('email')
   }
-  
+
   formValidation = new FormGroup({
-    userEmail : new FormControl('',[
-      Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")])
+    email : new FormControl('',[
+      Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
+    firstName: new FormControl(),
+    lastName: new FormControl(),
+    dob: new FormControl(),
+    password: new FormControl()
   })
 
 
@@ -32,8 +36,8 @@ export class RegistrationComponent implements OnInit {
     //this.student = new Student();
   }
 
-  registerStudent(addForm: NgForm) {
-    this.studentService.addStudent(addForm.value).subscribe(
+  registerStudent() {
+    this.studentService.addStudent(this.formValidation.value).subscribe(
       (response: Student) => {
         this.message = "Successfully Registered!";
         console.log(response);
@@ -43,6 +47,6 @@ export class RegistrationComponent implements OnInit {
       }
 
     );
-    
+
   }
 }

@@ -1,5 +1,5 @@
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, 
-pre, form, fieldset, input, textarea, p, blockquote, th, td { 
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, p, blockquote, th, td {
   padding:0;
   margin:0;}
 
@@ -58,15 +58,15 @@ html,body{
   background-color: #ffffff;
   width: 520px;
   height: 70px;
-  border-radius: 8px/7px; 
+  border-radius: 8px/7px;
   left      : 50%;
   top       : 4%;
   position  : relative;
   transform : translate(-50%, -10%);
   text-align: center;
-  -webkit-animation: cssAnimation 8s forwards; 
+  -webkit-animation: cssAnimation 8s forwards;
   animation: cssAnimation 8s forwards;
-  
+
 }
 
 @keyframes cssAnimation {
@@ -92,16 +92,17 @@ html,body{
     top       : 50%;
     position  : absolute;
     transform : translate(-50%, -50%);
-  width: 520px; 
-  height: 820px; 
-  -webkit-border-radius: 8px/7px; 
-  -moz-border-radius: 8px/7px; 
-  border-radius: 8px/7px; 
-  background-color: #ffffff; 
-  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-  box-shadow: 1px 2px 15px rgba(48, 48, 48, 0.31); 
-  
+  width: 520px;
+  height: auto;
+  -webkit-border-radius: 8px/7px;
+  -moz-border-radius: 8px/7px;
+  border-radius: 8px/7px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+  box-shadow: 1px 2px 15px rgba(48, 48, 48, 0.31);
+  margin: 25px 0px 25px 0px;
+
 }
 
 input[type=radio] {
@@ -162,16 +163,16 @@ hr{
 }
 
 input[type=text],input[type=password], input[type=date]{
-  width: 335px; 
-  height: 58px; 
-  -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
-  -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px; 
-  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
-  background-color: #f2f2f2; 
+  width: 335px;
+  height: 58px;
+  -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
+  -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px;
+  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
+  background-color: #f2f2f2;
 
   border: solid 0px #cbc9c9;
   margin-left: -5px;
-  margin-top: 35px; 
+  margin-top: 35px;
   padding-left: 10px;
 }
 
@@ -203,13 +204,13 @@ input:focus{
   background-color: #F2F2F2;
   padding: 20px 0px 4px 15px;
   margin-left: 10px;
-  -webkit-border-radius: 4px 0px 0px 4px; 
-  -moz-border-radius: 4px 0px 0px 4px; 
+  -webkit-border-radius: 4px 0px 0px 4px;
+  -moz-border-radius: 4px 0px 0px 4px;
   border-radius: 4px 0px 0px 4px;
   color: #9a9a9a;
   border: solid px #cbc9c9;
   height: 34px;
-  
+
 }
 
 .lettericon{
@@ -240,12 +241,12 @@ button {
   margin-top: 20px;
   display: inline-block;
   text-decoration: none;
-  width: 420px; height: 55px; 
-  -webkit-border-radius: 5px; 
-  -moz-border-radius: 5px; 
+  width: 420px; height: 55px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   transition: all 0.1s linear 0s;
-  border-radius: 5px; 
-  background-color: #1A82F7; 
+  border-radius: 5px;
+  background-color: #1A82F7;
   text-align: center;
   align-items: center;
   border: none;
@@ -255,7 +256,7 @@ button:hover {
   top: 3px;
   background-color:#0f4da9;
 
-  
+
 }
 
 
