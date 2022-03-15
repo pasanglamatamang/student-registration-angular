@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import {Component, OnInit} from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { StudentService } from '../service/student.service';
 import {Student} from "../student";
 
@@ -26,7 +27,7 @@ export class RegistrationComponent implements OnInit {
   })
 
 
-  constructor(public studentService: StudentService) {
+  constructor(public studentService: StudentService, private router: Router) {
 
   }
 
@@ -45,8 +46,16 @@ export class RegistrationComponent implements OnInit {
       (error: HttpErrorResponse) => {
         this.message = error.message;
       }
-
     );
-
   }
+
+  showAllStudentsLink = () =>{
+    this.router.navigateByUrl('/dashboard');
+
+  };
+
+
+
+
+
 }

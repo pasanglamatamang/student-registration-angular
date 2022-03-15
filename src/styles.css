@@ -254,8 +254,17 @@ button {
 button:hover {
   top: 3px;
   background-color:#0f4da9;
+}
 
+.showAllStudentsLink{
+  margin-top: 50px;
+  color: gray;
+  cursor: pointer;
+  text-decoration: underline;
+}
 
+.showAllStudentsLink:hover{
+  color: #1A82F7;
 }
 
 
