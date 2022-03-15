@@ -30,8 +30,9 @@
     <hr>
 
     <button [disabled]="addForm.invalid" type="submit" class="button">Register</button>
-    <div  *ngIf="message" class="alert-box" role="alert">
-      <p class="alertMessage"><strong>{{ message }}</strong></p>
+
+    <div  *ngIf="message" class="alert-box">
+      <p class="alertMessage">{{ message }}</p>
 
     </div>
     <h4>

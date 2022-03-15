@@ -46,7 +46,7 @@ h4 {
   font-weight: 300;
   color: gray;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 50px;
   margin-bottom: 10px;
 }
 
@@ -55,14 +55,13 @@ html,body{
 }
 
 .alert-box{
-  background-color: #ffffff;
-  width: 520px;
+  width: 510px;
   height: 70px;
   border-radius: 8px/7px;
   left      : 50%;
   top       : 4%;
-  position  : relative;
-  transform : translate(-50%, -10%);
+  position  : absolute;
+  transform : translate(-50%, +980%);
   text-align: center;
   -webkit-animation: cssAnimation 8s forwards;
   animation: cssAnimation 8s forwards;
@@ -93,7 +92,7 @@ html,body{
     position  : absolute;
     transform : translate(-50%, -50%);
   width: 520px;
-  height: auto;
+  height: 840px;
   -webkit-border-radius: 8px/7px;
   -moz-border-radius: 8px/7px;
   border-radius: 8px/7px;

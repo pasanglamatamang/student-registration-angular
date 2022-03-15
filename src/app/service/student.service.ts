@@ -16,15 +16,9 @@ export class StudentService {
   }
 
   public getAllStudents(): Observable<Student[]> {
-    return this.http.get<Student[]>('${this.studentsURL}/students');
+    return this.http.get<Student[]>(`${this.API_URL}` + '/students');
   }
 
-  /*
-      public getStudentById(id) {
-          const url = '${this.studentsURL}/students/${id}';
-          return this.http.get<Student>(url);
-      }
-  */
 
   public addStudent(student: Student): Observable<Student> {
     console.log(student);
@@ -35,13 +29,11 @@ export class StudentService {
   }
 
   public updateStudent(id: Student, student: Student): Observable<Student> {
-    const url = '${this.studentsURL}/updateStudent/${id}';
-    return this.http.put<Student>(url, student);
+    return this.http.put<Student>(`${this.API_URL}` + '/updateStudent/${id}', student);
   }
 
   deleteStudent(id: Student): Observable<void> {
-    const url = '${this.studentsURL}/deleteStudent/${id}';
-    return this.http.delete<void>(url);
+    return this.http.delete<void>(`${this.API_URL}` + '/deleteStudent/${id}');
   }
 
 
