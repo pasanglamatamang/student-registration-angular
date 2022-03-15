@@ -1,4 +1,7 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { StudentService } from '../service/student.service';
+import { Student } from '../student';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  students: Student[] = [];
+  constructor(public studentService: StudentService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getStudents();
   }
+
+  getStudents() {
+    this.studentService.getAllStudents().subscribe(
+      (response: Student[]) => {
+        this.students = response;
+        console.log(this.students);
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+
+      }
+      );
+  }
+
+
+
 
 }

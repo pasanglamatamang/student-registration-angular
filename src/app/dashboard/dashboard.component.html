@@ -1,1 +1,26 @@
-<p>dashboard works!</p>
+<h1><p style="color: aliceblue; font-size: 30px;">Dashboard works!</p></h1>
+
+<div class="dashboardBox">
+    
+    <table>
+        <tr>
+            <th>Student Id</th>
+            <th>Fist Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>DoB</th>
+            <th>Password</th>
+        </tr>
+
+        <tr *ngFor="let student of students" >
+            <td>{{student.id}}</td>
+            <td>{{student.firstName}}</td>
+            <td>{{student.lastName}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.dob}}</td>
+            <td>{{student.password}}</td>
+        </tr>
+       
+    </table>
+
+</div>
