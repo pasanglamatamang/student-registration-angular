@@ -10,7 +10,7 @@ html,body{
   background-color: #ffffff;
   box-shadow: 1px 2px 15px #3030304f;
   margin: 25px 25px;
-  padding: 50px 50px;
+  padding: 20px 50px 50px 50px;
 
 }
 
@@ -20,10 +20,41 @@ table {
   width: 100%;
 }
 
-td, th {
+td {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 10px;
 }
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 10px;
 
+}
+
+.addStudentButton{
+  background-color: #0acb41;
+  width: 150px;
+  height: 50px;
+  float: right;
+  margin-bottom: 40px;
+}
+
+.addStudentButton:hover{
+  background-color: #03b618;
+}
+
+.updateButton{
+  background-color: #eb9a0d;
+  width: 130px;
+  height: 50px;
+  margin-left: 40px;
+}
+
+.deleteButton{
+  background-color: #f0410c;
+  width: 130px;
+  height: 50px;
+  margin-left: 40px;
+}
 
