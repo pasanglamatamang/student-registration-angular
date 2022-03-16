@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../service/student.service';
 import { Student } from '../student';
 
+import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -12,7 +14,9 @@ export class DashboardComponent implements OnInit {
 
   students: Student[] = [];
 
-  constructor(public studentService: StudentService) { }
+  closeModal!: string;
+
+  constructor(public studentService: StudentService, private modalService: NgbModal) { }
 
   ngOnInit() {
     this.getStudents();
@@ -43,6 +47,23 @@ export class DashboardComponent implements OnInit {
     );
   }
 
+  triggerModal(content: any) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((res) => {
+      this.closeModal = `Closed with: ${res}`;
+    }, (res) => {
+      this.closeModal = `Dismissed ${this.getDismissReason(res)}`;
+    });
+  }
+  
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
+  }
 
 
 

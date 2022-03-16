@@ -33,6 +33,10 @@ th {
 }
 
 .addStudentButton{
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
   background-color: #0acb41;
   width: 150px;
   height: 50px;
@@ -45,16 +49,31 @@ th {
 }
 
 .updateButton{
-  background-color: #eb9a0d;
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  background-color: #1A82F7;
   width: 130px;
   height: 50px;
   margin-left: 40px;
 }
 
+.updateButton:hover{
+  background-color: #115fb8;
+}
+
 .deleteButton{
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
   background-color: #f0410c;
   width: 130px;
   height: 50px;
   margin-left: 40px;
 }
 
+.deleteButton:hover{
+  background-color: #b33008;
+}
