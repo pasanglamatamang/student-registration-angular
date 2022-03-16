@@ -11,6 +11,7 @@ import { Student } from '../student';
 export class DashboardComponent implements OnInit {
 
   students: Student[] = [];
+
   constructor(public studentService: StudentService) { }
 
   ngOnInit() {
@@ -24,10 +25,22 @@ export class DashboardComponent implements OnInit {
         console.log(this.students);
       },
       (error: HttpErrorResponse) => {
+        console.log(error);  
         alert(error.message);
 
       }
       );
+  }
+
+  deleteStudent(id: Student) {
+    this.studentService.deleteStudent(id).subscribe(
+      (response) => {
+        console.log(response);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
 

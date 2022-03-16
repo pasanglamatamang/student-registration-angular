@@ -20,7 +20,7 @@
             <td>{{student.email}}</td>
             <td>{{student.dob}}</td>
             <td>{{student.password}}</td>
-            <td><button class="updateButton">Update</button> <button class="deleteButton">Delete</button></td>
+            <td><button class="updateButton">Update</button> <button (click)="deleteStudent(student)" class="deleteButton">Delete</button></td>
         </tr>
        
     </table>
